@@ -1,0 +1,12 @@
+.home-container {
+	// background-color: brown;
+	// padding: 0 10%;
+	height: 100vh;
+}
+
+// media query for 1440px
+@media screen and (max-width: 1440px) {
+	.home-container {
+		padding: 0;
+	}	
+}

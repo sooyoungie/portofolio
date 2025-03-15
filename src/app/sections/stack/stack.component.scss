@@ -1,0 +1,45 @@
+.stack-container {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.text-logo {
+	font-family: 'Space Grotesk';
+	font-weight: 700;
+	font-size: 24px;
+	// text-transform: uppercase;
+}
+
+.icon-size {
+	font-size: 60px;
+}
+
+// media queries 
+@media (max-width: 1440px) {
+	.stack-container {
+		padding-left: 0;
+		padding-right: 0;
+		gap: 3.5rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.stack-container {
+		gap: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.text-logo {
+		font-size: 16px;
+	}
+
+	.icon-size {
+		font-size: 40px;
+	}
+
+	.stack-container {
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+}

@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Space Grotesk';
+		src: url('./assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype'),
+	}
+	@font-face {
+		font-family: 'Space Grotesk Semibold';
+		src: url('./assets/fonts/SpaceGrotesk-SemiBold.ttf') format('truetype'),
+	}
+	@font-face {
+		font-family: 'Space Grotesk Medium';
+		src: url('./assets/fonts/SpaceGrotesk-Medium.ttf') format('truetype'),
+	}
+}
+
+@layer components {
+	.main-button {
+		padding: 13px 30px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 40px;
+		border: 2px solid #ef4444;
+		background-color: #ef4444;
+		color: #ffffff;
+		text-decoration: none;
+		transition: all .35s ease;
+		font-weight: 400;
+		box-shadow: none;
+		text-transform: uppercase;
+		font-family: 'Space Grotesk Medium';
+	}
+
+	.pills {
+		background: rgba(248, 113, 113, .5);
+		// border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 5px 12px;
+    display: inline-block;
+		color: #ffffff;
+		font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+	}
+
+	.social-button {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 2px solid #ffffff;
+		background-color: #ef4444;
+		transition: all .35s ease;
+		color: #ffffff;
+	}
+}

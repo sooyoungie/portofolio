@@ -1,0 +1,47 @@
+<div class="header-top-fixed one-page-nav flex items-center justify-center">
+  <div class="container flex items-center justify-between">
+    <!-- Logo Section -->
+    <div class="logo">
+			<img src="logo-bw.png" alt="logo" class="logo-light" />
+    </div>
+
+    <!-- Menu Section -->
+    <ul
+      class="main-menu lg:flex hidden gap-4"
+      [ngClass]="{
+        'flex flex-col absolute gap-0 bg-black bg-opacity-90 top-20 left-0 w-full z-50 shadow-lg border-t-2 py-4 lg:py-0': isMenuOpen,
+        'hidden': !isMenuOpen
+      }"
+    >
+      <li class=" px-4 lg:py-0 lg:px-0">
+        <a href="#home" class="menu-item block">Home</a>
+      </li>
+      <li class=" px-4 lg:py-0 lg:px-0">
+        <a href="#about" class="menu-item block">About Me</a>
+      </li>
+      <li class=" px-4 lg:py-0 lg:px-0">
+        <a href="#project" class="menu-item block">Projects</a>
+      </li>
+      <li class=" px-4 lg:py-0 lg:px-0">
+        <a href="#services" class="menu-item block">Services</a>
+      </li>
+      <li class=" px-4 lg:py-0 lg:px-0">
+        <a href="#contact" class="menu-item block">Contact Me</a>
+      </li>
+    </ul>
+
+    <!-- Buttons Section -->
+    <div class="flex items-center ml-10">
+      <a href="" class="main-button hidden lg:inline-flex">Let's Talk</a>
+      <button
+        class="toggler-menu lg:hidden focus:outline-none"
+        (click)="toggleMenu()"
+        aria-label="Toggle menu"
+      >
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+  </div>
+</div>

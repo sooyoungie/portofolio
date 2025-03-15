@@ -1,0 +1,134 @@
+.header-top-fixed {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 111;
+	// padding-top: 20px;
+	// padding-bottom: 20px;
+	background-color: transparent;
+	transition: all .35s ease;
+}
+
+// .one-page-nav {
+
+// }
+
+// .container {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
+
+.logo-light {
+	width: 120px;
+}
+
+// .navbar-brand {
+// 	text-decoration: none;
+// 	white-space: nowrap;
+// }
+
+// .navbar-brand:hover {
+
+// }
+
+.main-menu {
+	// display: flex;
+	list-style: none;
+	margin: 0 0 0 auto;
+	padding: 0 auto 0 0;
+}
+
+.menu-item {
+	padding: 6px 0;
+	margin: 0 8px;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	position: relative;
+	font-family: 'Space Grotesk Medium';
+}
+
+// .px-btn {
+// 	padding: 13px 30px;
+// 	align-items: center;
+// 	justify-content: center;
+// 	border-radius: 40px;
+// 	border: 2px solid #0788ff;
+// 	background-color: #0788ff;
+// 	color: #ffffff;
+// 	text-decoration: none;
+// 	transition: all .35s ease;
+// 	font-weight: 400;
+// 	box-shadow: none;
+// 	text-transform: uppercase;
+// 	font-family: 'Space Grotesk Medium';
+// }
+
+.toggler-menu {
+	background-color: transparent;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, .2) !important;
+	border-radius: 5px;
+	padding: 0 15px;
+	height: 40px;
+	line-height: 1;
+	position: relative;
+	margin-left: 15px;
+}
+
+// Media Query for 2560px
+@media screen and (min-width:1441px) and (max-width: 2560px) {
+	// .main-menu {
+	// 	list-style: none;
+	// 	margin: 0 0 0 50%;
+	// 	padding: 0 auto 0 0;
+	// }
+	.container {
+		padding: 0 4.5% 0 4.5%;
+	}
+}
+
+// Media Query for 1400px
+@media (max-width: 1440px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+
+// Media Query for 1024px
+@media (max-width: 1024px) {
+	.container {
+		max-width: 1140px;
+		padding: 0 3% 0 3%;
+	}
+}
+
+// Media Query for 992px
+@media (max-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+// Media Query for 768px
+@media (max-width: 768px) {
+	.container {
+		max-width: 720px;
+		padding: 0;
+	}
+
+	.logo-light {
+		width: 80px;
+	}
+}
+
+// Media Query for 576px
+@media (max-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}

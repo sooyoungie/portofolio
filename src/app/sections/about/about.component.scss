@@ -1,0 +1,179 @@
+// .about {
+// 	position: ;
+// 	top: 20%;
+// }
+
+.container {
+  padding: 5% 0 5% 25%;
+}
+
+.text-box {
+	font-family: 'Space Grotesk Semibold';
+	font-weight: 700;
+	font-size: 70px;
+	text-transform: uppercase;	
+}
+
+.text-description {
+	font-family: 'Space Grotesk';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: .03em;
+}
+
+.anim-1 {
+	animation: typewriter-1;
+}
+
+.anim-2 {
+	animation: typewriter-2;
+}
+
+.anim-1, .anim-2 {
+	overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 8s;
+  animation-timing-function: steps(18, end);
+  animation-iteration-count: infinite;
+}
+
+.anim-1::after, .anim-2::after {
+	content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes typewriter-1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 5.65em;
+  }
+}
+
+@keyframes typewriter-2 {
+	0%, 50%, 100% {
+		width: 0;
+	}
+	60%, 90% {
+		width: 4.6em;
+	}
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+// Media Query for 2560px
+@media screen and (min-width:1441px) and (max-width: 2560px) {
+	.container {
+    padding: 5% 0 0 25%;
+  }
+}
+
+// Media Query for 1440px
+@media (max-width: 1440px) {
+	.container {
+		// margin-left: 10%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 0;
+	}
+}
+
+// Media Query for 1024px
+@media (max-width: 1024px) {
+	// .container {
+	// 	// margin-left: 3%;
+	// }
+
+  .text-box {
+    font-weight: 700;
+    font-size: 45px;
+  }
+  
+  .text-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: .03em;
+  }
+}
+
+// Media Query for 992px
+@media (max-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+// Media Query for 768px
+@media (max-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+
+	.logo-light {
+		width: 80px;
+	}
+}
+
+// Media Query for 576px
+@media (max-width: 576px) {
+	.container {
+		max-width: 540px;
+    padding-left: 2%;
+    padding-top: 10%;
+    padding-bottom: 0;
+    padding-right: 2%;
+	}
+
+  .text-box {
+    font-weight: 700;
+    font-size: 38px;
+  }
+  
+  .text-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: .03em;
+  }
+
+  .social-responsive {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) { 
+  .text-box {
+    font-weight: 700;
+    font-size: 34px;
+  }
+  
+  .text-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: .03em;
+  }
+
+  .container {
+    padding-left: 4%;
+    padding-top: 10%;
+    padding-bottom: 0;
+    padding-right: 4%;
+  }
+}
