@@ -18,13 +18,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'aw-universe' title`, () => {
-    expect(app.title).toEqual('aw-universe');
+  it(`should have the 'portofolio' title`, () => {
+    expect(app.title).toEqual('portofolio');
   });
 
   it('should render title', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, aw-universe');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portofolio');
   });
 });

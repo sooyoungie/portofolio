@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aw-universe": {
+    "portofolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/aw-universe",
+            "outputPath": "dist/portofolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -52,7 +52,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumError": "5kB"
                 }
               ],
               "outputHashing": "all",
@@ -60,9 +60,7 @@
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             },
             "development": {
               "optimization": false,
@@ -76,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "aw-universe:build:production"
+              "buildTarget": "portofolio:build:production"
             },
             "development": {
-              "buildTarget": "aw-universe:build:development"
+              "buildTarget": "portofolio:build:development"
             }
           },
           "defaultConfiguration": "development"
