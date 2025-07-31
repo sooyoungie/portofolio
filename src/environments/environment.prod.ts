@@ -1,5 +1,5 @@
 export const environment = {
 	production: true,
 	apiUrl: 'https://your-api-domain.com/api',
-	appName: 'AwUniverse'
+	appName: 'portofolio'
 };
