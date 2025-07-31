@@ -4,7 +4,7 @@ export const routes: Routes = [
 	{
 		path: '',
 		loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
-		title: 'AwUniverse - Home'
+		title: 'AW Universe - Home'
 	},
 	{
 		path: '**',
