@@ -21,6 +21,7 @@
 	</div>
 </div> -->
 
+<section class="about" animateOnScroll>
 <div class="container flex items-center justify-start">
   <div class="flex items-center">
     <!-- Left Content -->
@@ -45,12 +46,15 @@
       </div> -->
 			<div class="social-container w-full py-4 flex flex-wrap gap-4 items-center">
 				<div class="w-full sm:w-auto flex justify-center">
-					<button class="main-button w-full">GET IN TOUCH <fa-icon [icon]="faArrowRight" class="ml-2"></fa-icon></button>
+					<button class="main-button w-full" (click)="scrollToSection('contact')">GET IN TOUCH <fa-icon [icon]="faArrowRight" class="ml-2"></fa-icon></button>
 				</div>
 				<div class="flex flex-wrap justify-center sm:flex-row gap-4 social-responsive">
 					<button class="social-button"><fa-icon [icon]="faFacebook" size="xl"></fa-icon></button>
 					<button class="social-button"><fa-icon [icon]="faInstagram" size="xl"></fa-icon></button>
-					<button class="social-button"><fa-icon [icon]="faLinkedin" size="xl"></fa-icon></button>
+					<a href="https://www.linkedin.com/in/andika-wiguna/" target="_blank" rel="noopener noreferrer">
+						<button class="social-button"><fa-icon [icon]="faLinkedin" size="xl"></fa-icon></button>
+					</a>
+					<!-- <button class="social-button"><fa-icon [icon]="faLinkedin" size="xl"></fa-icon></button> -->
 				</div>
 			</div>
     </div>
@@ -61,3 +65,4 @@
     </div>
   </div>
 </div>
+</section>

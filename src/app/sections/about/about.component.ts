@@ -1,23 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Component } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
 	selector: 'app-about',
-	templateUrl: 'about.component.html',
-	styleUrls: ['about.component.scss'],
+	templateUrl: './about.component.html',
+	styleUrl: './about.component.scss',
 	standalone: true,
-	imports: [FontAwesomeModule]
+	imports: [FaIconComponent, AnimateOnScrollDirective]
 })
+export class AboutComponent {
+	readonly faFacebook = faFacebookF;
+	readonly faInstagram = faInstagram;
+	readonly faLinkedin = faLinkedinIn;
+	readonly faArrowRight = faArrowRight;
 
-export class AboutComponent implements OnInit {
-	faFacebook = faFacebookF;
-	faInstagram = faInstagram;
-	faLinkedin = faLinkedinIn;
-	faArrowRight = faArrowRight;
-
-	constructor() { }
-
-	ngOnInit() { }
+	scrollToSection(sectionId: string): void {
+		if (!sectionId) return;
+		
+		const element = document.getElementById(sectionId);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 }

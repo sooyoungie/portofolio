@@ -1,4 +1,5 @@
-<div class="header-top-fixed one-page-nav flex items-center justify-center">
+<div class="progress-bar" [style.width.%]="scrollProgress"></div>
+<div class="header-top-fixed one-page-nav flex items-center justify-center" [class.scrolled]="isScrolled">
   <div class="container flex items-center justify-between">
     <!-- Logo Section -->
     <div class="logo">
@@ -14,25 +15,25 @@
       }"
     >
       <li class=" px-4 lg:py-0 lg:px-0">
-        <a href="#home" class="menu-item block">Home</a>
+        <a (click)="scrollToSection('header')" class="menu-item block cursor-pointer">Home</a>
       </li>
       <li class=" px-4 lg:py-0 lg:px-0">
-        <a href="#about" class="menu-item block">About Me</a>
+        <a (click)="scrollToSection('about')" class="menu-item block cursor-pointer">About Me</a>
       </li>
       <li class=" px-4 lg:py-0 lg:px-0">
-        <a href="#project" class="menu-item block">Projects</a>
+        <a (click)="scrollToSection('projects')" class="menu-item block cursor-pointer">Projects</a>
       </li>
       <li class=" px-4 lg:py-0 lg:px-0">
-        <a href="#services" class="menu-item block">Services</a>
+        <a (click)="scrollToSection('services')" class="menu-item block cursor-pointer">Services</a>
       </li>
       <li class=" px-4 lg:py-0 lg:px-0">
-        <a href="#contact" class="menu-item block">Contact Me</a>
+        <a (click)="scrollToSection('contact')" class="menu-item block cursor-pointer">Contact Me</a>
       </li>
     </ul>
 
     <!-- Buttons Section -->
     <div class="flex items-center ml-10">
-      <a href="" class="main-button hidden lg:inline-flex">Let's Talk</a>
+      <!-- <a href="" class="main-button hidden lg:inline-flex">Let's Talk</a> -->
       <button
         class="toggler-menu lg:hidden focus:outline-none"
         (click)="toggleMenu()"

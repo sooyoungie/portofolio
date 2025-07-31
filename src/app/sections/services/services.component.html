@@ -1,0 +1,15 @@
+<section class="services-section" animateOnScroll>
+	<div class="container">
+		<div class="section-header">
+			<span class="pills">Services</span>
+			<h2 class="text-box text-white">What I Offer</h2>
+		</div>
+
+		<div class="services-grid">
+			<app-service-card 
+				*ngFor="let service of serviceItems" 
+				[service]="service">
+			</app-service-card>
+		</div>
+	</div>
+</section>

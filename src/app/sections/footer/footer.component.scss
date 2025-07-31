@@ -1,0 +1,83 @@
+.footer {
+	padding: 20px 0;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(10px);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.footer-content {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	font-family: 'Space Grotesk';
+}
+
+.built-with {
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+
+.heart-icon {
+	color: #ef4444;
+	font-size: 14px;
+	animation: heartbeat 2s ease-in-out infinite;
+}
+
+.angular-link {
+	color: #dd0031;
+	text-decoration: none;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		color: #ff1744;
+		text-shadow: 0 0 8px rgba(221, 0, 49, 0.5);
+	}
+}
+
+.tailwind-link {
+	color: #06b6d4;
+	text-decoration: none;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	
+	&:hover {
+		color: #0891b2;
+		text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+	}
+}
+
+.copyright {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes heartbeat {
+	0%, 50%, 100% {
+		transform: scale(1);
+	}
+	25%, 75% {
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 768px) {
+	.built-with {
+		font-size: 14px;
+		flex-wrap: wrap;
+	}
+	.copyright {
+		font-size: 12px;
+	}
+}

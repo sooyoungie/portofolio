@@ -1,5 +1,4 @@
 <div class="home-container bg-gradient-to-r from-red-600 from-0% via-red-900 via-40% to-slate-900 to-80% xl:to-90%">
-<!-- <div class="home-container bg-gradient-to-br from-red-900 via-red-500 to-red-400"> -->
 	<section id="header">
 		<app-header></app-header>
 	</section>
@@ -9,4 +8,21 @@
 	<section id="stack">
 		<app-stack></app-stack>
 	</section>
+	<section id="projects">
+		<app-projects (projectClick)="onProjectClick($event)"></app-projects>
+	</section>
+	<section id="services">
+		<app-services></app-services>
+	</section>
+	<section id="contact">
+		<app-contact></app-contact>
+	</section>
+	<app-footer></app-footer>
 </div>
+
+<app-project-modal
+	[isOpen]="isProjectModalOpen"
+	[project]="selectedProject"
+	[isMobile]="isMobile"
+	(closeModal)="onCloseProjectModal()">
+</app-project-modal>

@@ -1,0 +1,165 @@
+.service-card {
+	height: 350px;
+	border-radius: 16px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	flex-direction: column;
+}
+
+.service-image {
+	position: relative;
+	height: 60%;
+	overflow: hidden;
+	background: linear-gradient(45deg, #ef4444, #dc2626);
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&.image-error {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-family: 'Space Grotesk Semibold';
+		font-size: 16px;
+		text-align: center;
+		
+		&::before {
+			content: attr(data-service-name);
+		}
+	}
+}
+
+.service-icon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background: rgba(239, 68, 68, 0.9);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	backdrop-filter: blur(10px);
+
+	fa-icon {
+		font-size: 20px;
+	}
+}
+
+.service-content {
+	padding: 20px;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.service-title {
+	font-family: 'Space Grotesk Semibold';
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 8px;
+	line-height: 1.2;
+}
+
+.service-description {
+	font-family: 'Space Grotesk';
+	font-size: 14px;
+	line-height: 1.4;
+	color: rgba(255, 255, 255, 0.8);
+	height: 60px;
+	overflow: hidden;
+	margin-bottom: 35px;
+	position: relative;
+
+	&.scrolling {
+		animation: scrollText 8s linear infinite;
+	}
+}
+
+@keyframes scrollText {
+	0%, 15% {
+		transform: translateY(0);
+	}
+	85%, 100% {
+		transform: translateY(calc(-100% + 60px));
+	}
+}
+
+.service-rating {
+	display: flex;
+	gap: 2px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+.star {
+	font-size: 16px;
+	color: #fbbf24;
+
+	&.full {
+		color: #fbbf24;
+	}
+
+	&.half {
+		background: linear-gradient(90deg, #fbbf24 50%, rgba(255, 255, 255, 0.3) 50%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	&.empty {
+		color: rgba(255, 255, 255, 0.3);
+	}
+}
+
+@media (max-width: 1024px) {
+	.service-card {
+		height: 320px;
+	}
+	.service-title {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 768px) {
+	.service-card {
+		height: 300px;
+	}
+	.service-content {
+		padding: 15px;
+	}
+	.service-rating {
+		bottom: 15px;
+		left: 15px;
+	}
+}
+
+@media (max-width: 576px) {
+	.service-card {
+		height: 280px;
+	}
+	.service-title {
+		font-size: 16px;
+	}
+	.service-description {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 375px) {
+	.service-card {
+		height: 260px;
+	}
+}

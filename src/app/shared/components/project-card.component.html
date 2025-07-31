@@ -1,0 +1,17 @@
+<div class="project-card" (click)="onClick()">
+	<div class="project-image">
+		<img [src]="project.image" [alt]="project.name" loading="lazy" 
+			 [attr.data-project-id]="project.id" (error)="onImageError($event)"
+			 [style.display]="project.imageError ? 'none' : 'block'">
+		<div class="image-placeholder" [style.display]="project.imageError ? 'flex' : 'none'">
+			<span>{{ project.name }}</span>
+		</div>
+		<div class="project-overlay">
+			<h3 class="project-title">{{ project.name }}</h3>
+			<p class="project-description">{{ project.description }}</p>
+			<div class="tech-stack">
+				<span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+			</div>
+		</div>
+	</div>
+</div>

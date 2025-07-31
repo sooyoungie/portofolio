@@ -1,0 +1,48 @@
+<!-- Desktop Modal -->
+<div *ngIf="isOpen && !isMobile" class="modal-overlay" (click)="onClose()">
+	<div class="modal-content" (click)="$event.stopPropagation()">
+		<button class="modal-close" (click)="onClose()" aria-label="Close modal">
+			<fa-icon [icon]="faClose"></fa-icon>
+		</button>
+		<div *ngIf="project" class="modal-body">
+			<img [src]="project.image" [alt]="project.name" class="modal-image">
+			<div class="modal-info">
+				<h3 class="modal-title">{{ project.name }}</h3>
+				<p class="modal-description">{{ project.details }}</p>
+				<div class="modal-tech">
+					<span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+				</div>
+				<div class="modal-actions">
+					<button class="main-button">View Live</button>
+					<button class="main-button secondary">View Code</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Mobile Bottom Sheet -->
+<div *ngIf="isOpen && isMobile" class="bottom-sheet-overlay" (click)="onClose()">
+	<div class="bottom-sheet" [class.closing]="isClosing" (click)="$event.stopPropagation()">
+		<div class="bottom-sheet-header">
+			<div class="bottom-sheet-handle"></div>
+			<button class="bottom-sheet-close" (click)="onClose()" aria-label="Close">
+				<fa-icon [icon]="faClose"></fa-icon>
+			</button>
+		</div>
+		<div *ngIf="project" class="bottom-sheet-content">
+			<img [src]="project.image" [alt]="project.name" class="bottom-sheet-image">
+			<div class="bottom-sheet-info">
+				<h3 class="bottom-sheet-title">{{ project.name }}</h3>
+				<p class="bottom-sheet-description">{{ project.details }}</p>
+				<div class="bottom-sheet-tech">
+					<span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+				</div>
+				<div class="bottom-sheet-actions">
+					<button class="main-button">View Live</button>
+					<button class="main-button secondary">View Code</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -18,6 +18,43 @@
 	}
 }
 
+@layer base {
+	/* Accessibility improvements */
+	*:focus-visible {
+		outline: 2px solid #ef4444;
+		outline-offset: 2px;
+		border-radius: 4px;
+	}
+
+	/* Reduced motion support */
+	@media (prefers-reduced-motion: reduce) {
+		*, *::before, *::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+
+	/* High contrast mode support */
+	@media (prefers-contrast: high) {
+		.main-button, .social-button {
+			border-width: 3px;
+		}
+	}
+
+	/* Screen reader only content */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+}
+
 @layer components {
 	.main-button {
 		padding: 13px 30px;
@@ -33,21 +70,32 @@
 		box-shadow: none;
 		text-transform: uppercase;
 		font-family: 'Space Grotesk Medium';
+		min-height: 44px;
+		min-width: 44px;
+	}
+
+	.main-button:hover {
+		background-color: #dc2626;
+		border-color: #dc2626;
+	}
+
+	.main-button:focus-visible {
+		outline: 2px solid #ffffff;
+		outline-offset: 2px;
 	}
 
 	.pills {
 		background: rgba(248, 113, 113, .5);
-		// border: 1px solid #ffffff;
-    border-radius: 4px;
-    padding: 5px 12px;
-    display: inline-block;
+		border-radius: 4px;
+		padding: 5px 12px;
+		display: inline-block;
 		color: #ffffff;
 		font-family: 'Space Grotesk';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
 	}
 
 	.social-button {
@@ -58,5 +106,18 @@
 		background-color: #ef4444;
 		transition: all .35s ease;
 		color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.social-button:hover {
+		background-color: #dc2626;
+		transform: scale(1.05);
+	}
+
+	.social-button:focus-visible {
+		outline: 2px solid #ffffff;
+		outline-offset: 2px;
 	}
 }

@@ -1,0 +1,87 @@
+<section class="contact-section" animateOnScroll>
+	<div class="container">
+		<div class="section-header">
+			<span class="pills">Contact</span>
+			<h2 class="text-box text-white">Get In Touch</h2>
+		</div>
+
+		<div class="contact-content">
+			<div class="contact-info">
+				<div class="profile-image">
+					<img src="assets/img/profile.jpg" alt="Profile" (error)="onImageError($event)">
+				</div>
+				
+				<div class="contact-details">
+					<div class="contact-item">
+						<fa-icon [icon]="faEnvelope" class="contact-icon"></fa-icon>
+						<span>redsooyoung&#64;gmail.com</span>
+					</div>
+					<div class="contact-item">
+						<fa-icon [icon]="faPhone" class="contact-icon"></fa-icon>
+						<span>+62 821-6141-6143</span>
+					</div>
+				</div>
+
+				<div class="social-links">
+					<a href="#" class="social-link">
+						<fa-icon [icon]="faFacebookF"></fa-icon>
+					</a>
+					<a href="#" class="social-link">
+						<fa-icon [icon]="faInstagram"></fa-icon>
+					</a>
+					<a href="https://www.linkedin.com/in/andika-wiguna/" target="_blank" rel="noopener noreferrer" class="social-link">
+						<fa-icon [icon]="faLinkedinIn"></fa-icon>
+					</a>
+				</div>
+			</div>
+
+			<div class="contact-form">
+				<form (ngSubmit)="onSubmit()" #contactFormRef="ngForm">
+					<div class="form-group">
+						<input 
+							type="text" 
+							id="name" 
+							name="name"
+							[(ngModel)]="contactForm.name"
+							placeholder="Your Name"
+							required>
+					</div>
+					
+					<div class="form-group">
+						<input 
+							type="email" 
+							id="email" 
+							name="email"
+							[(ngModel)]="contactForm.email"
+							placeholder="Your Email"
+							required>
+					</div>
+					
+					<div class="form-group">
+						<input 
+							type="text" 
+							id="subject" 
+							name="subject"
+							[(ngModel)]="contactForm.subject"
+							placeholder="Subject"
+							required>
+					</div>
+					
+					<div class="form-group">
+						<textarea 
+							id="message" 
+							name="message"
+							[(ngModel)]="contactForm.message"
+							placeholder="Your Message"
+							rows="5"
+							required></textarea>
+					</div>
+					
+					<button type="submit" class="main-button" [disabled]="!contactFormRef.form.valid">
+						Send Message
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
